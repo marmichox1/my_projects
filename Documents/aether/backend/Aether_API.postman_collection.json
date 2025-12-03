@@ -1,0 +1,269 @@
+{
+    "info": {
+        "name": "Aether E-commerce API",
+        "description": "API collection for Aether Modern Apparel backend",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Products",
+            "item": [
+                {
+                    "name": "Get All Products",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/products.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "products.php"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Product by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/products.php?id=1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "products.php"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Products by Category",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/products.php?category=Outerwear",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "products.php"
+                            ],
+                            "query": [
+                                {
+                                    "key": "category",
+                                    "value": "Outerwear"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Orders",
+            "item": [
+                {
+                    "name": "Create Order",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"customer_email\": \"customer@example.com\",\n  \"customer_name\": \"John Doe\",\n  \"items\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Structure Coat\",\n      \"price\": 450,\n      \"quantity\": 1,\n      \"selectedSize\": \"M\"\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"Void Trousers\",\n      \"price\": 220,\n      \"quantity\": 2,\n      \"selectedSize\": \"L\"\n    }\n  ]\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/orders.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "orders.php"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Orders",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/orders.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "orders.php"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Order by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/orders.php?id=1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "orders.php"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Newsletter",
+            "item": [
+                {
+                    "name": "Subscribe to Newsletter",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"email\": \"user@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/newsletter.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "newsletter.php"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Subscribers",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/newsletter.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "newsletter.php"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Unsubscribe from Newsletter",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"email\": \"user@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost/aether/backend/api/newsletter.php",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "path": [
+                                "aether",
+                                "backend",
+                                "api",
+                                "newsletter.php"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "API Info",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost/aether/backend/api/index.php",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "path": [
+                        "aether",
+                        "backend",
+                        "api",
+                        "index.php"
+                    ]
+                }
+            }
+        }
+    ]
+}
